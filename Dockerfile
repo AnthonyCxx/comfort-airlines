@@ -32,6 +32,9 @@ RUN adduser \
 # Do not remove the update and upgrade. Installing MariaDB developer dependencies fail without it.
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt install gcc libmariadb-dev -y
+# these are for testing the ip and changing the ip in create_db.py
+RUN apt install iproute2
+RUN apt install vim
 
 # Download dependencies as a separate step to take advantage of Docker's caching.
 # Leverage a cache mount to /root/.cache/pip to speed up subsequent builds.
