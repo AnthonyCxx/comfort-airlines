@@ -20,7 +20,7 @@
 
 from sqlalchemy import create_engine, Column, ForeignKey
 #                 app object ^
-from sqlalchemy.types import (Integer, Boolean, Float, Time, Date, DECIMAL, VARCHAR)
+from sqlalchemy.types import (Integer, Time, Date, VARCHAR)
 #from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import declarative_base, relationship, Session, sessionmaker
 
@@ -102,21 +102,8 @@ class Airport(Base):
     airport_ID = Column(Integer, primary_key=True)
     
     # DATA
-    flight_number = Column(Integer, ForeignKey('flight.flight_number'), nullable=False)
-    gate_used = Column(Integer, nullable=False)
-    takeoff_cost = Column(DECIMAL, nullable=False)
-    name = Column(VARCHAR(255), nullable=False)
-    lata_code = Column(VARCHAR(255), nullable=False)
-    city = Column(VARCHAR(255), nullable=False)
-    state = Column(VARCHAR(255), nullable=False)
-    metro_population = Column(Integer, nullable=False)
-    paris_acceptable = Column(Boolean, nullable=False)
-    hub = Column(Boolean, nullable=False)
-    num_gates = Column(Integer, nullable=False)
-    latitude = Column(Float, nullable=False)
-    longitude = Column(Float, nullable=False)
-    landing_cost = Column(DECIMAL, nullable=False)
-    fuel_price = Column(DECIMAL, nullable=False)
+    flight_in_number = Column(Integer, ForeignKey('flight.flight_number'), unique=True, nullable=False)
+    flight_out_number = Column(Integer, ForeignKey('flight.flight_number'), unique=True, nullable=False)
     
     # RELATION
     flight = relationship('Flight', back_populates='Airport')
@@ -128,33 +115,7 @@ class Aircraft(Base):
     tail_number = Column(Integer, primary_key=True)
 
     # DATA
-    craft_type = Column(Integer, ForeignKey('aircraft_type.craft_type'), nullable=False)
-    at_hub = Column(Boolean, nullable=False)
-    maintenance = Column(Boolean, nullable=False)
-    maintenance_timer = Column(Time, nullable=False)
-    flight_hours = Column(Time, nullable=False)
-    in_flight = Column(Boolean, nullable=False)
-
-    # RELATION
-    aircraft_type = relationship('AircraftType', back_populates='Aircraft')
-
-
-class AircraftType(Base):
-    __tablename__ = 'aircraft_type'
-    # PRIMARY KEY
-    craft_type = Column(Integer, primary_key=True)
-
-    # DATA
-    craft_make = Column(VARCHAR(255), nullable=False)
-    craft_model = Column(VARCHAR(255), nullable=False)
-    passenger_capacity = Column(Integer, nullable=False)
-    max_speed = Column(Integer, nullable=False)
-    max_fuel_capacity = Column(Integer, nullable=False)
-    max_range = Column(Integer, nullable=False)
-    max_altitude = Column(Integer, nullable=False)
-
-    # RELATION
-    aircraft = relationship('Aircraft', back_populates='AircraftType')
+    craft_type = Column(Integer, nullable=False)
 
 
 # set up engine based on db location
