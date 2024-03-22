@@ -44,23 +44,6 @@ def test_airport_constructor(
     assert airport.takeoff_fee == takeoff_fee
     assert airport.landing_fee == landing_fee
     assert airport.tarmac == tarmac
-    
-
-####################################### For Temporary Reference ####################################################
-# Test flight_number type
-def test_airport_name_type_error() -> None:
-    with pytest.raises(TypeError):
-        _: Airport = Airport(name, iata_code, city, state, metro_population, is_hub, available_gates, latitude, longitude, gas_price, takeoff_fee, landing_fee, tarmac)
-        _: Airport = Airport("Denver International Airport", "DEN", "Denver", "Colorado", 2949387, True, 11, 39.8561, -104.6737, 2.45, Decimal('900.00'), Decimal('450.00'), Queue())
-
-# Test for negative flight_number
-def test_airport_negative_metro_population() -> None:
-    _: Airport = Airport(name, iata_code, city, state, metro_population, is_hub, available_gates, latitude, longitude, gas_price, takeoff_fee, landing_fee, tarmac)
-    _: Airport = Airport("Denver International Airport", "DEN", "Denver", "Colorado", 2949387, True, 11, 39.8561, -104.6737, 2.45, Decimal('900.00'), Decimal('450.00'), Queue())
-
-    with pytest.raises(ValueError):
-        _: Airport = Airport("Denver International Airport", "DEN", "Denver", "Colorado", 2949387, True, 11, 39.8561, -104.6737, 2.45, Decimal('900.00'), Decimal('450.00'), Queue())
-####################################### For Temporary Reference ####################################################
 
         
 # Test name type
