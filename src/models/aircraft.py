@@ -46,6 +46,10 @@ class Aircraft:
         self.fuel_efficiency = fuel_efficiency
         self.wait_timer = WAIT_TIMERS.get(status, 0)
         self.max_range = max_range                      # km
+        
+    def set_status(self, status: AircraftStatus) -> None:
+        self.status = status
+        self.wait_timer = WAIT_TIMERS.get(status, 0)
 
 class AircraftFactory:
     # Static class variables

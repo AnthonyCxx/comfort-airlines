@@ -5,10 +5,14 @@
 #
 # Description:
 #   This module defines and implements the model class `Airport` as well as the factories and enumerated types for constructing them.
+from __future__ import annotations
+from typing import TYPE_CHECKING
 
 from decimal import Decimal
 from enum import Enum
-from queue import Queue
+
+if TYPE_CHECKING:
+    from models.aircraft import Aircraft
 
 class AirportType(Enum):
     """Enumerated type. Defines the 2 types of airports."""
@@ -20,7 +24,7 @@ class Airport:
     def __init__(
             self, name: str, iata_code: str, city: str, state: str, metro_population: int,
             is_hub: bool, available_gates: int, latitude: float, longitude: float,
-            gas_price: float, takeoff_fee: Decimal, landing_fee: Decimal, tarmac: Queue
+            gas_price: Decimal, takeoff_fee: Decimal, landing_fee: Decimal, tarmac: list[Aircraft]
         ):
         
         # Check name type
@@ -76,11 +80,11 @@ class Airport:
             raise ValueError("longitude value must be between -180 and 180")
         
         # Check gas_price type
-        if not type(gas_price) is float:
-            raise TypeError(f"parameter 'gas_price' is not of type 'float'. Got type: {type(gas_price)}")
+        if not type(gas_price) is Decimal:
+            raise TypeError(f"parameter 'gas_price' is not of type 'Decimal'. Got type: {type(gas_price)}")
         
         # Check if negative gas_price
-        if gas_price < 0:
+        if gas_price < Decimal("0"):
             raise ValueError("gas_price cannot be negative")
         
         # Check takeoff_fee type
@@ -100,8 +104,8 @@ class Airport:
             raise ValueError("landing_fee cannot be negative")
         
         # Check tarmac type
-        if not type(tarmac) is Queue:
-            raise TypeError(f"parameter 'tarmac' is not of type 'Queue'. Got type: {type(tarmac)}")
+        if not type(tarmac) is list:
+            raise TypeError(f"parameter 'tarmac' is not of type 'list[Aircraft]'. Got type: {type(tarmac)}")
         
         self.name = name
         self.iata_code = iata_code

@@ -7,12 +7,14 @@
 #   This module defines and implements the model class `route` which provides an object associated with 
 #   a specific source, destination, and aircraft type.
 
+from decimal import Decimal
+
 from models.aircraft import AircraftType
 from models.airport import Airport
 
 class Route:
     def __init__(self, aircraft_type: AircraftType, source_airport: Airport, destination_airport: Airport, distance: float, daily_demand: int,
-                 estimated_flight_time: int, fuel_requirement: float):
+                 estimated_flight_time: int, fuel_requirement: float, ticket_cost: Decimal, net_profit: Decimal):
         # Check for aircraft type
         if not isinstance(aircraft_type, AircraftType):
             raise TypeError("Aircraft type must be an instance of AircraftType")
@@ -48,3 +50,5 @@ class Route:
         self.daily_demand = daily_demand
         self.estimated_flight_time = estimated_flight_time
         self.fuel_requirement = fuel_requirement
+        self.ticket_cost = ticket_cost
+        self.net_profit = net_profit
