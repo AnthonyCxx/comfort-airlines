@@ -8,6 +8,7 @@
 
 import structlog
 import csv
+from models.airport import Airport
 from models.flight import Flight
 from models.aircraft import Aircraft
 from models.route import Route
@@ -30,7 +31,7 @@ class Scheduler:
         return flight_number
     
     @staticmethod
-    def schedule_flight(simulation_time: int, aircraft: Aircraft, all_routes: list[Route], all_passengers: list[Passenger]) -> None:
+    def schedule_flight(simulation_time: int, aircraft: Aircraft, all_routes: list[Route], all_passengers: list[Passenger], all_airports: list[Airport]) -> None:
         """
         The function should take the following parameters: the simulation time, the aircraft to be scheduled, 
         the list of ALL routes, and the list of ALL passengers. Then, filter the list of all routes to find the 
@@ -38,17 +39,26 @@ class Scheduler:
         (Write a filter() for each condition and then casting the final filter object to a list).
         """
         
+        compatible_routes = filter(lambda route: all_routes.source_airport == aircraft.location, all_routes)
         #   1) The source airport of the route must be the current location of the aircraft
-        
+
+        compatible_routes = filter(lambda route: all_routes.aircraft_type == aircraft.type, compatible_routes)
         #   2) The aircraft type of the route must be the type of the aircraft
-        
+
+        compatible_routes = filter(lambda route: all_routes.fuel_requirement < aircraft.fuel_capacity, compatible_routes)
         #   3) The fuel requirement of the route must be less than or equal to the fuel capacity of the aircraft.
-        
+
+        compatible_routes = filter(lambda route: all_routes.current_demand <= 1, compatible_routes)
         #   4) There must be at least 1 passenger at the aircraft's current location that wants to take that route
-        
+
+        if aircraft.timer >= 195:
+            hub_routes = filter(lambda hub: all_airports.is_hub == 1, all_airports)
+            compatible_routes = filter(lambda route: )
         #   5) If the aircraft needs maintenance, the destination airport of the route must be a hub
         
         # Selecting the Route:
+
+        route = max(compatible_routes, key=lambda route: route.net_profit)
         #   You should select the route with the maximum net profit. You can do this easily by using the built-in max() function and specifying the key is the net profit.
          
         #   Then, refuel if needed (set the status of the aircraft to boarding with or without refueling).
