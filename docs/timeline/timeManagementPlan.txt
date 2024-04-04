@@ -1,0 +1,74 @@
+Team: Foobar
+Teammates: Anthony Cox, Corey Lawrence, Dylan Hudson,
+           Parker Blue, Will Wadsworth, Zach Christopher
+
+Description: Time Management Plan for team Foobar
+
+----------------------------------------------------------------------------------------------------
+
+Task: Review Project Requirements
+Assigned to: All Members
+Description: All members must look over 'project.pdf' in depth to get an understanding of the
+             project and its requirements
+Assign date: January 10, 2024
+Due date: January 11, 2024
+Completion date: January 11, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Gather Initial Airport Data/ Cross reference data
+Assigned to: Corey Lawrence, Anthony Cox
+Description: Gather initial data for airports (airport, iata code, city, state, metro area,
+             metro population, latitude, longitude) then cross reference both sets of data
+             and adjust data accordinly
+Assign date: January 11, 2024
+Due date: January 15, 2024
+Completion date: January 15, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Gather Additional Project Requirements
+Assigned to: All members
+Description: Look for previously missed/ smaller requirements within 'project.pdf'
+Assign date: January 15, 2024
+Due date: January 18, 2024
+Completion date: January 18, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Research Shortest Path Algorithms
+Assigned to: Zach Christopher
+Description: Research different shortest path algorithms to try and find layovers that can shorten 
+             flight times/ allow for profitable layovers
+Assign date: January 15, 2024
+Due date: January 19, 2024
+Completion date: January 19, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Eliminate Illegal Flights
+Assigned to: Corey Lawrence
+Description: Eliminate flights that are less than 150 miles
+Assign date: January 15, 2024
+Due date: January 17, 2024
+Completion date: January 17, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Determine Flight Demand
+Assigned to: Will Wadsworth
+Description: After eliminating illegal flights, determine number of passengers or "traffic" for
+             for each flight so we can calculate the price of tickets and net profit for flights
+Assign date: January 17, 2024
+Due date:
+Completion date:
+
+----------------------------------------------------------------------------------------------------
+
+Task: Calculate Break Even Cost Per Flight
+Assigned to: Parker Blue
+Description:
+Assign date:
+Due date:
+Completion date:
+
