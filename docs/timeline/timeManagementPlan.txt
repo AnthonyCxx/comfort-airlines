@@ -89,10 +89,10 @@ Description: - Derive the image from the official MariaDB image
              - Set up persistant storage for MariaDB
              The purpose of using Docker as a deployment environment is to deploy the necessary 
              programs, packages, and settings with our program rather than assuming that the execution 
-             environment is correctly configured. Although we were given the official MariaDB Docker image, 
-             we also require Python 3.10 to be installed; so, we will have to create a custom image. Using 
-             the official MariaDB Docker image provided above as a starting point, create a custom docker 
-             image that meets the requirements below.
+             environment is correctly configured. Although we were given the official MariaDB Docker 
+             image, we also require Python 3.10 to be installed; so, we will have to create a custom 
+             image. Using the official MariaDB Docker image provided above as a starting point, 
+             create a custom docker image that meets the requirements below.
 Assign Date: January 16, 2024
 Due Date: January 18, 2024
 Completion Date: January 18, 2024
@@ -289,7 +289,154 @@ Completion Date: February 22, 2024
 
 ----------------------------------------------------------------------------------------------------
 
-Task: 
+Task: Write Aircraft Module
+Assigned to: Anthony Cox, Will Wadsworth
+Description: Write the module for airplane to then be used in time table generation algorithm
+Assign Date: February 16, 2024
+Due Date: March 14, 2024
+Completion Date: March 14, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Write Airports Module
+Assigned to: Corey Lawrence, Dylan Hudson
+Description: Write the module for airport to then be used in time table generation algorithm
+Assign Date: February 16, 2024
+Due Date: March 14, 2024
+Completion Date: March 14, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Plan and Outline Perfect Simulation
+Assigned to: Anthony Cox
+Description: Plan and outline the execution of the perfect simulation, be ready to add delays when
+             perfect simulation functions correctly
+Assign Date: March 1, 2024
+Due Date: March 8, 2024
+Completion Date: March 8, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Develop Perfect Simulation
+Assigned to: Anothony Cox
+Description: Develop perfect simluation, begin writing code
+Assign Date: March 8, 2024
+Due Date: March 28, 2024
+Completion Date: March 28, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Write Flight.py module
+Assigned to: Dylan Hudson
+Description: Write the models/flight.py module. The module should contain a Flight class. 
+             Unlike the Route class from the route module, which represents a generic route that 
+             can be flown, the Flight class represents a flight that is flown by an aircraft. 
+             Check for all constraints in the constructor. If a bad type is given, raise a TypeError; 
+             if a bad value is given (e.g. a negative flight number), raise a ValueError. All tests 
+             should test for both legal and illegal values (to verify that the class works as 
+             intended and catches errors). If you find yourself repeating code across unit tests, 
+             consider abstracting the repeated code into a pytest fixture.
+
+             with the following data members:
+
+             - The flight number (as a unique integer greater than 0, provided by the scheduler)
+             - The time the flight was scheduled (as an int greater than 0)
+             - The aircraft flying the route (Aircraft from the models.aircraft module)
+             - The route being flown (Route from the models.route module)
+             - The passengers on the flight (Passenger from the models.passenger module)
+             you should test:
+
+             - the constructor correctly initializes all fields
+             - the constructor raises type errors for invalid types for each field
+             - the constructor raises value errors for invalid value ranges for each field
+Assign Date: March 14, 2024
+Due Date: March 21, 2024
+Completion Date: March 21, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Update Flight.py
+Assigned to: Dylan Hudson
+Description: Add four new data members:
+
+             - expected_departure_time: int
+             - expected_arrival_time: int
+             - actual_departure_time: int
+             - actual_arrival_time: int
+             The expected departure and arrival times should be added to the constructor since they 
+             can be derived from the expected travel time of the route, boarding, and deboarding 
+             times. The actual times must be initialized after the flight has landed, you you 
+             should assign then None
+Assign Date: March 21, 2024
+Due Date: March 21, 2024
+Completion Date: March 21, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Write Route.py
+Assigned to: Corey Lawrence, Zach Christopher
+Description: Write the models/route.py module. The module should contain a Route class that 
+             represents a route that can be flown from a source airport to a destination airport 
+             (a directional flight). Check for all constraints in the constructor. If a bad type 
+             is given, raise a TypeError; if a bad value is given (e.g. a negative demand), raise a 
+             ValueError. All tests should test for both legal and illegal values (to verify that the 
+             class works as intended and catches errors). If you find yourself repeating code across 
+             unit tests, consider abstracting the repeated code into a pytest fixture.       
+             
+             with the following data members:
+
+             - The type of aircraft required (AircraftType from the models.aircraft module)
+             - The source airport (Airport from the models.airport module)
+             - The destination airport (Airport from the models.airport module)
+             - The distance between the airports (as a float greater than 0)
+             - The daily demand for the route (an an int greater than 0)
+             - The estimated time to fly the route (as an integer greater than 0)
+             - The fuel requirement for the route (as a float greater than 0)
+
+             you should test:
+
+             - the constructor correctly initializes all fields
+             - the constructor raises type errors for invalid types for each field
+             - the constructor raises value errors for invalid value ranges for each field
+             - the source airport should not be destination airport
+Assign Date: March 14, 2024
+Due Date: March 21, 2024
+Completion Date: March 21, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Write Passenger.py
+Assigned to: Anthony Cox, Parker Blue
+Description: Write the models/passenger.py module. The module should contain a Passenger class that 
+             represents a passenger trying to make it from a source airport to a destination airport. 
+             Check for all constraints in the constructor. If a bad type is given, raise a TypeError; 
+             if a bad value is given (e.g. a negative flight number), raise a ValueError. All tests 
+             should test for both legal and illegal values (to verify that the class works as 
+             intended and catches errors). If you find yourself repeating code across unit tests, 
+             consider abstracting the repeated code into a pytest fixture.
+
+             with the following data members:
+
+             - The source airport (Airport from the models.airport module)
+             - The location of the passenger (either Airport from the models.airport module or None 
+             if they are in flight. Implement the type annotation as a Union of Airport and None: 
+             Union[Airport, None]
+             - The destination airport (Airport from the models.airport module)
+             - A list of the flights taken (list[Flight] with Flight from the models.flight module)
+             - An identifier (a unique integer, implemented as a static counter)
+
+             you should test:
+
+             - the constructor correctly initializes all fields
+             - the constructor raises type errors for invalid types for each field
+             - the constructor raises value errors for invalid value ranges for each field
+Assign Date: March 14, 2024
+Due Date: March 21, 2024
+Completion Date: March 21, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task:
 Assigned to:
 Description:
 Assign Date:
@@ -298,7 +445,7 @@ Completion Date:
 
 ----------------------------------------------------------------------------------------------------
 
-Task: 
+Task:
 Assigned to:
 Description:
 Assign Date:
@@ -307,7 +454,52 @@ Completion Date:
 
 ----------------------------------------------------------------------------------------------------
 
-Task: 
+Task:
+Assigned to:
+Description:
+Assign Date:
+Due Date:
+Completion Date:
+
+----------------------------------------------------------------------------------------------------
+
+Task:
+Assigned to:
+Description:
+Assign Date:
+Due Date:
+Completion Date:
+
+----------------------------------------------------------------------------------------------------
+
+Task:
+Assigned to:
+Description:
+Assign Date:
+Due Date:
+Completion Date:
+
+----------------------------------------------------------------------------------------------------
+
+Task:
+Assigned to:
+Description:
+Assign Date:
+Due Date:
+Completion Date:
+
+----------------------------------------------------------------------------------------------------
+
+Task:
+Assigned to:
+Description:
+Assign Date:
+Due Date:
+Completion Date:
+
+----------------------------------------------------------------------------------------------------
+
+Task:
 Assigned to:
 Description:
 Assign Date:
