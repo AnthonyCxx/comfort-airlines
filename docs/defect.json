@@ -1,0 +1,112 @@
+{
+    "Team": "Foobar",
+    "Teammates": ["Anthony Cox", "Corey Lawrence", "Dylan Hudson", "Parker Blue", "Will Wadsworth", "Zach Christopher"],
+    "Description": "Defect log for team Foobar",
+    "Defects": [
+      {
+        "Date": "2.1.2024",
+        "ID": "CA-001",
+        "Severity": "Severe",
+        "Priority": "High",
+        "Description": "Scripts (flight_demand.csv, flight_fuel_capacity.csv, and flight_profit_loss.csv) calculate inaccurate data.",
+        "Steps to reproduce": [
+          "Run scripts.",
+          "Run calculations manually.",
+          "Observe difference."
+        ],
+        "Assigned to": "Parker Blue",
+        "Status": {
+          "State": "Completed",
+          "Date": "2.6.2024"
+        },
+        "Comments": "Converted distance in flight_demand.csv, flight_fuel_capacity.csv, and flight_profit_loss.csv to weighted distance. Added percent full for possible number of plane per day."
+      },
+      {
+        "Date": "2.6.2024",
+        "ID": "CA-002",
+        "Severity": "Moderate",
+        "Priority": "Medium",
+        "Description": "Script to create the database does not complete execution.",
+        "Steps to reproduce": [
+          "Run create_db.py script.",
+          "Wait.",
+          "Program fails execution, noting it was unable to connect to the docker."
+        ],
+        "Assigned to": ["Dylan Hudson", "Will Wadsworth"],
+        "Status": {
+          "State": "Completed",
+          "Date": "2.8.2024"
+        },
+        "Comments": "Incorrect usage of the dockers and incorrect IP used in the script."
+      },
+      {
+        "Date": "2.18.2024",
+        "ID": "CA-003",
+        "Severity": "Severe",
+        "Priority": "High",
+        "Description": "Docker application crashes due to ports.",
+        "Steps to reproduce": [
+          "Start Docker application.",
+          "Docker application crashes."
+        ],
+        "Assigned to": "Anthony Cox",
+        "Status": {
+          "State": "Completed",
+          "Date": "2.19.2024"
+        },
+        "Comments": "Updated application port exposed by docker from 8000 to 32000 because 8000 is reserved by Apple on Macs, which causes the application to crash."
+      },
+      {
+        "Date": "2.19.2024",
+        "ID": "CA-004",
+        "Severity": "Minimal",
+        "Priority": "Low",
+        "Description": "Aircraft class constructor can be provided impossible fuel levels.",
+        "Steps to reproduce": [
+          "Initialize an aircraft with a fuel level less than 0 or greater than its capacity."
+        ],
+        "Assigned to": ["Anthony Cox", "Will Wadsworth"],
+        "Status": {
+          "State": "Completed",
+          "Date": "2.20.2024"
+        },
+        "Comments": "Updated class constructor to include error checking."
+      },
+      {
+        "Date": "3.20.2024",
+        "ID": "CA-005",
+        "Severity": "Moderate",
+        "Priority": "Low",
+        "Description": "Route module does not accurately track flight demand for a given flight.",
+        "Steps to reproduce": [
+          "Run simulation.",
+          "Note demand for a flight for each airport/aircraft in the log.",
+          "Observe that passenger count is not accurate over each day."
+        ],
+        "Assigned to": ["Corey Lawrence", "Zach Christopher"],
+        "Status": {
+          "State": "Completed",
+          "Date": "3.21.2024"
+        },
+        "Comments": "Separated flight demand variable into two: current, daily demand. Script now resets current demand to daily demand after each day."
+      },
+      {
+        "Date": "3.20.2024",
+        "ID": "CA-006",
+        "Severity": "Moderate",
+        "Priority": "Low",
+        "Description": "Flight module does not include expected/actual arrival times.",
+        "Steps to reproduce": [
+          "Run simulation.",
+          "Observe that the flight module does not keep track of the expected/actual times."
+        ],
+        "Assigned to": "Dylan Hudson",
+        "Status": {
+          "State": "Completed",
+          "Date": "3.21.2024"
+        },
+        "Comments": "Added four respective data members initialized to None, and update after flight has landed."
+      }
+    ]
+}
+  
