@@ -523,12 +523,94 @@ Completion Date: April 18, 2024
 
 ----------------------------------------------------------------------------------------------------
 
-Task:
-Assigned to:
-Description:
-Assign Date:
-Due Date:
-Completion date:
+Task: Review hardcoded variables/values
+Assigned to: All memebers
+Description: Review any of the original csv's created such as aircraft.csv and airports.csv for any
+             inaccurate information, while these values are hardcoded they are scanned and double
+             checked when running flight_master_record.py
+Assign Date: March 28, 2024
+Due Date: April 18, 2024
+Completion date: April 18, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Start presentation
+Assigned to: Dylan Hudson
+Description: Make a skeleton of the presentation which will later be finalized by the entire group
+Assign Date: March 28, 2024
+Due Date: April 15, 2024
+Completion date: April 15, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Finalize and flesh out presentation
+Assigned to: All members 
+Description: Finalize the project presentation and flesh out details
+Assign Date: April 15, 2024
+Due Date: April 18, 2024
+Completion date: April 18, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Standardization of reports
+Assigned to: Anthony Cox
+Description: updating report classes to instance classes instead of static classes so they could have 
+             lifetime-based construction and destruction
+Assign Date: March 28, 2024
+Due Date: April 18, 2024
+Completion date: April 18, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Incorporated Paris via adding new Boeing 747-400
+Assigned to: Anthony Cox
+Description: generating 180 new flight routes, and Paris-specific flight scheduler requirements
+Assign Date: March 28, 2024
+Due Date: April 18, 2024
+Completion date: April 18, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Updated scheduler to account for operating hours
+Assigned to: Anthony Cox
+Description: Update scheduler to account for the operating hours of different airports
+Assign Date: March 28, 2024
+Due Date: April 4, 2024
+Completion date: April 4, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Updated README to include instructions to install project dependencies 
+      and how to run the program
+Assigned to: Anthony Cox
+Description: Update README to keep up with dependendencies and requirements
+Assign Date: March 28, 2024
+Due Date: April 4, 2024
+Completion date: April 4, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Wrote 2 ledger scripts to calculate the gross profit and to calculate the difference in 
+      profits when aggregating and not aggregating flights
+Assigned to: Anthony Cox
+Description: Write ledger scripts to calculate gross profit and difference when aggregating 
+             and not aggregating flights
+Assign Date: April 11, 2024
+Due Date: April 18, 2024
+Completion date: April 18, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Added active flight aggregation
+Assigned to: Anthony Cox
+Description: Added active aggregation to take flights to hubs to aggregate passengers
+             to then send to other airports, allowing for more customers and more money
+             aggregation can be turned off with constant
+             Constant located in constant.py, set aggregate == true for aggregation,
+             and aggregate == false for not aggregation
+Assign Date: March 28, 2024
+Due Date: April 11, 2024
+Completion date: April 11, 2024
 
 ----------------------------------------------------------------------------------------------------
 
@@ -575,83 +657,5 @@ Assign Date:
 Due Date:
 Completion date:
 
-----------------------------------------------------------------------------------------------------
-
-Task:
-Assigned to:
-Description:
-Assign Date:
-Due Date:
-Completion date:
-
-----------------------------------------------------------------------------------------------------
-
-Task:
-Assigned to:
-Description:
-Assign Date:
-Due Date:
-Completion date:
-
-----------------------------------------------------------------------------------------------------
-
-Task:
-Assigned to:
-Description:
-Assign Date:
-Due Date:
-Completion date:
-
-----------------------------------------------------------------------------------------------------
-
-Task:
-Assigned to:
-Description:
-Assign Date:
-Due Date:
-Completion date:
-
-----------------------------------------------------------------------------------------------------
-
-Task:
-Assigned to:
-Description:
-Assign Date:
-Due Date:
-Completion date:
-
-----------------------------------------------------------------------------------------------------
-
-Task:
-Assigned to:
-Description:
-Assign Date:
-Due Date:
-Completion date:
-
-----------------------------------------------------------------------------------------------------
-
-Task:
-Assigned to:
-Description:
-Assign Date:
-Due Date:
-Completion date:
-
-----------------------------------------------------------------------------------------------------
-
-Task:
-Assigned to:
-Description:
-Assign Date:
-Due Date:
-Completion date:
-
-----------------------------------------------------------------------------------------------------
-
-Task:
-Assigned to:
-Description:
-Assign Date:
-Due Date:
-Completion date:
+Partially complete: - Delay module
+                      (written partial implementation just not tested)
