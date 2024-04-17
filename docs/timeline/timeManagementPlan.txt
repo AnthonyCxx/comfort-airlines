@@ -436,12 +436,90 @@ Completion Date: March 21, 2024
 
 ----------------------------------------------------------------------------------------------------
 
-Task:
-Assigned to:
-Description:
-Assign Date:
-Due Date:
-Completion Date:
+Task: Write scheduler.py
+Assigned to: Dylan Hudson, Zach Christopher
+Description: Write scheduler module to schedule flights and create time table to then be used in
+             simulation
+Assign Date: March 21, 2024
+Due Date: March 28, 2024
+Completion Date: March 28, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Crete GUI for customer, stats, and demo
+Assigned to: Corey Lawrence
+Description: This is a cherry on top, with no real parameters on what needs to be included, do 
+             what you can before the due date. Develop a GUI for the customer, subtasks listed below. 
+             No parameters for what to make just do what you can and make tasks for them 
+             before due date
+Assign Date: March 28, 2024
+Due Date: April 18, 2024
+Completion Date: April 18, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Create schedule page (GUI subtask)
+Assigned to: Corey Lawrence
+Description: Use the schedule.js file to show the full table on load with all details of all flights
+             Use two dropdowns to filter by source and destination locations
+Assign Date: March 28, 2024
+Due Date: April 18, 2024
+Completion Date: April 18, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Create ledger page (GUI subtask)
+Assigned to: Corey Lawrence
+Description: Create JS file to load in all needed profit and loss info from the ledger.csv file 
+             and display nicely in a table
+             Incorporate a profits over time function to watch profits tick up from simulation 
+             start time to simulation end
+Assign Date: March 28, 2024
+Due Date: April 18, 2024
+Completion Date: April 18, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Create login page to display list of airports and users name (GUI subtask)
+Assigned to: Corey Lawrence
+Description: Create the JS file needed to import airports.csv and display city names
+Assign Date: March 28, 2024
+Due Date: April 18, 2024
+Completion Date: April 18, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Create tickets page (GUI subtask)
+Assigned to: Corey Lawrence
+Description: Create JS file to import all flight information
+             Populate a boarding pass with all needed information
+             Incorporate weather at source and destination locations, which change dynamically
+             based on input
+             Create a mock payment area to display ticket prices and process CC payment
+Assign Date: March 28, 2024
+Due Date: April 18, 2024
+Completion Date: April 18, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Create dashboard (GUI subtask)
+Assigned to: Corey Lawrence
+Description: Show useful information to the customer based on their flight selection
+Assign Date: March 28, 2024 
+Due Date: April 18, 2024
+Completion Date: April 18, 2024
+
+----------------------------------------------------------------------------------------------------
+
+Task: Create aircraft simulation page (GUI subtask)
+Assigned to: Corey Lawrence
+Description: Create JS file to load in all flights and pull needed information for each
+             given time step
+             Create a box to hold information on each of the 56 aircraft and display their status
+             over the course of the simulation
+Assign Date: March 28, 2024
+Due Date: April 18, 2024
+Completion Date: April 18, 2024
 
 ----------------------------------------------------------------------------------------------------
 
@@ -450,7 +528,7 @@ Assigned to:
 Description:
 Assign Date:
 Due Date:
-Completion Date:
+Completion date:
 
 ----------------------------------------------------------------------------------------------------
 
@@ -459,7 +537,7 @@ Assigned to:
 Description:
 Assign Date:
 Due Date:
-Completion Date:
+Completion date:
 
 ----------------------------------------------------------------------------------------------------
 
@@ -468,7 +546,7 @@ Assigned to:
 Description:
 Assign Date:
 Due Date:
-Completion Date:
+Completion date:
 
 ----------------------------------------------------------------------------------------------------
 
@@ -477,7 +555,7 @@ Assigned to:
 Description:
 Assign Date:
 Due Date:
-Completion Date:
+Completion date:
 
 ----------------------------------------------------------------------------------------------------
 
@@ -486,7 +564,7 @@ Assigned to:
 Description:
 Assign Date:
 Due Date:
-Completion Date:
+Completion date:
 
 ----------------------------------------------------------------------------------------------------
 
@@ -495,7 +573,7 @@ Assigned to:
 Description:
 Assign Date:
 Due Date:
-Completion Date:
+Completion date:
 
 ----------------------------------------------------------------------------------------------------
 
@@ -504,4 +582,76 @@ Assigned to:
 Description:
 Assign Date:
 Due Date:
-Completion Date:
+Completion date:
+
+----------------------------------------------------------------------------------------------------
+
+Task:
+Assigned to:
+Description:
+Assign Date:
+Due Date:
+Completion date:
+
+----------------------------------------------------------------------------------------------------
+
+Task:
+Assigned to:
+Description:
+Assign Date:
+Due Date:
+Completion date:
+
+----------------------------------------------------------------------------------------------------
+
+Task:
+Assigned to:
+Description:
+Assign Date:
+Due Date:
+Completion date:
+
+----------------------------------------------------------------------------------------------------
+
+Task:
+Assigned to:
+Description:
+Assign Date:
+Due Date:
+Completion date:
+
+----------------------------------------------------------------------------------------------------
+
+Task:
+Assigned to:
+Description:
+Assign Date:
+Due Date:
+Completion date:
+
+----------------------------------------------------------------------------------------------------
+
+Task:
+Assigned to:
+Description:
+Assign Date:
+Due Date:
+Completion date:
+
+----------------------------------------------------------------------------------------------------
+
+Task:
+Assigned to:
+Description:
+Assign Date:
+Due Date:
+Completion date:
+
+----------------------------------------------------------------------------------------------------
+
+Task:
+Assigned to:
+Description:
+Assign Date:
+Due Date:
+Completion date:
