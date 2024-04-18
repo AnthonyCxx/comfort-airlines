@@ -329,3 +329,34 @@ Assigned to: Anthony Cox
 Status: Open
 Comments: 
 
+---------------------------------------------------------------------------------------------------
+
+Date: 4.16.2024
+ID: CA-022
+Severity: Minimal
+Priority: Low
+Description: 'Starting location' in simulation GUI loads in a smaller size than other fields.
+Steps to reproduce: 1. Load simulation GUI.
+                    2. 'Starting location' field appears smaller than name fields.
+Assigned to: Corey Lawrence
+
+Status: Open
+Comments: 
+
+---------------------------------------------------------------------------------------------------
+
+Date: 4.17.2024
+ID: CA-023
+Severity: Severe
+Priority: High
+Description: Future passengers (depending on route) were missing, affecting sales.
+Steps to reproduce: 1. Run simulation
+                    2. Wait for simulation to finish.
+                    3. Flights towards the end of the simulation did not have enough passengers,
+                       when they should have.
+Assigned to: Anthony Cox
+
+Status: Completed (4.17.2024)
+Comments: Daily demand (constant) in scheduler module was being decremented instead of
+          current demand.
+
