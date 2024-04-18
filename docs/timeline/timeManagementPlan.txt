@@ -614,48 +614,49 @@ Completion date: April 11, 2024
 
 ----------------------------------------------------------------------------------------------------
 
-Task:
-Assigned to:
-Description:
-Assign Date:
-Due Date:
-Completion date:
+Task: Create delay module and testing for implementation
+Assigned to: Parker Blue
+Description: Attempt to write a delay module to simulate delays due to bad weather/
+             high winds. Does not need to be complete but just as proof of concept
+Assign Date: March 28, 2024
+Due Date: April 18, 2024
+Completion date: April 18, 2024
 
 ----------------------------------------------------------------------------------------------------
 
-Task:
-Assigned to:
-Description:
-Assign Date:
-Due Date:
-Completion date:
+Task: Edit existing and possibly create new scheduler for handling aggregation
+Assigned to: Parker Blue, Anthony Cox
+Description: Attempt to alter scheduler.py to account for feeder flights and connecting flights
+             we believe we were losing money without feeder flights and connecter flights
+Assign Date: March 28, 2024
+Due Date: April 18, 2024
+Completion date: April 18, 2024
 
 ----------------------------------------------------------------------------------------------------
 
-Task:
-Assigned to:
-Description:
-Assign Date:
-Due Date:
-Completion date:
+Task: Edit/revise Paris implementation to more accurately reflect reality
+Assigned to: Parker Blue
+Description: Only allow the new 400 plane to fly to and from Paris and New York, as well as an
+             occasional flight to a hub for maintanence
+Assign Date: March 28, 2024
+Due Date: April 18, 2024
+Completion date: April 18, 2024
 
 ----------------------------------------------------------------------------------------------------
 
-Task:
-Assigned to:
-Description:
-Assign Date:
-Due Date:
-Completion date:
+Task: Bug fix scheduler and prevent non compliant behavior
+Assigned to: All members
+Description: Scheduler is allowing flights to take off and land between 1:00 am and 5:00 which is  
+             not allowed and will result in fines
+Assign Date: April 15, 2024
+Due Date: April 17, 2024
+Completion date: April 17, 2024
 
 ----------------------------------------------------------------------------------------------------
 
-Task:
-Assigned to:
-Description:
-Assign Date:
-Due Date:
-Completion date:
-
-Partially complete: - Delay module
-                      (written partial implementation just not tested)
+Task: Update scripts
+Assigned to: Dylan Hudson
+Description: We currently have some hardcoded variables, adjust scripts to allow for input data
+Assign Date: April 15, 2024
+Due Date: April 17, 2024
+Completion date: April 17, 2024
